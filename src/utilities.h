@@ -10,13 +10,11 @@
 #include <optional>
 
 namespace util::file {
-    std::optional<void> write(std::string filename, Vector2d<double> results);
-    std::optional<Vector2d<double>> read(std::string filename);
+    void write(const std::string& filename, const Vector2d<double>& results);
+    Vector2d<double> read(const std::string& filename);
 }
 namespace util::math {
-    double sign(double n) {
-        return n > 0 ? 1.0 : -1.0;
-    }
+    double sign(double n);
 }
 
 #endif //LAB2_IMPLEMENTATION_UTILITIES_H
